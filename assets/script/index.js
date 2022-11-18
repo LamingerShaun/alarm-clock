@@ -14,7 +14,7 @@ const alarmTextContainer = document.getElementById("alarm-text");
 const alarmText = (time) => `Alarm set at time ${time}`;
 
 
-alarmAudio.src = "http://soundbible.com/grab.php?id=1252&type=mp3";
+alarmAudio.src = "./assets/media/alarm.mp3";
 alarmAudio.load();
 
 const handleSubmit = (event) => {
