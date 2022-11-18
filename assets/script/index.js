@@ -24,5 +24,22 @@ const renderTime = () => {
     currentTime.innerHTML = timeString;
 };
 
-
 setInterval(renderTime, 1000);
+
+var alarmString = null;
+
+const handleSubmit = (event) => {
+    event.preventDefault();
+    const { hour, sec, min, zone } = document.forms[0];
+    alarmString = getTimeString({
+    hours: hour.value,
+    seconds: sec.value,
+    minutes: min.value,
+    zone: zone.value
+});
+
+document.forms[0].reset();
+};
+
+
+document.forms[0].addEventListener("submit", handleSubmit);
